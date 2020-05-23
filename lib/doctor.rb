@@ -3,7 +3,7 @@ class Doctor
 
   @@all = []
 
-  def initialze(name)
+  def initialize(name)
     @name = name
     @@all << self
   end
@@ -17,11 +17,10 @@ class Doctor
   end
 
   def appointments
-    Appointment.all.select {|appointment| appointment.doctor == self}
+    Appointment.all.select { |appointment| appointment.doctor == self }
   end
 
   def patients
-    self.appointments.map {|appointment| appointment.patient}
+    appointments.map(&:patient)
   end
-
 end
