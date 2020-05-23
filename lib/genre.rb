@@ -7,3 +7,5 @@ class Genre
     @name = name
     @@all << self
   end
+
+end
