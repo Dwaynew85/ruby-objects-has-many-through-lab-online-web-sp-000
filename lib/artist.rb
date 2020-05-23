@@ -21,6 +21,6 @@ class Artist
     new_song.name = self
   end
 
-  def 
+  def
 
 end
